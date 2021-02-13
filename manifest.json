@@ -1,0 +1,25 @@
+{
+   "name" : "Стандартная тема ВК",
+   "description" : "Данное расширение возвращает привычное оформление вебсайта VK",
+   "version": "0.0.1",
+   "author": "JeViCo",
+   "manifest_version": 2,
+   
+   "content_scripts": [ {
+      "css": ["style.css"],
+      "matches": [ "https://vk.com/*" ],
+      "run_at": "document_start"
+   } ],
+
+   "browser_action": {
+      "default_icon": "images/logo.png"
+   },
+   "icons": {
+      "16": "images/logo.png",
+      "48": "images/logo.png",
+      "128": "images/logo.png"
+  },
+   "optional_permissions": [ "activeTab" ],
+   "permissions": [ "https://vk.com/*", "tabs", "contextMenus", "storage", "webRequest", "webRequestBlocking" ],
+   "web_accessible_resources": [ "*" ]
+}
